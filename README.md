@@ -1,11 +1,11 @@
 # Skin Classification Bot
 
 ## 📌 Overview
-This project is a **Skin Classification Bot** that uses a machine learning model to classify skin images. It automates the process of analyzing skin conditions and can send results via a messaging API.
+This project is a **Skin Classification Bot** that uses a machine learning model to classify skin images. It receives images from a chat application and sends back classification results. The model has been fine-tuned on custom data based on **ISIC**.
 
 ## 🚀 Features
-- Automatically logs into a website, extracts relevant data, and processes skin images.
-- Uses a pre-trained **ViT (Vision Transformer) model** for classification.
+- Receives images via the **LINE app** and responds with classification results.
+- Uses a pre-trained **ViT (Vision Transformer) model** fine-tuned on custom ISIC-based data for classification.
 - Integrates with a **messaging API** to send classification results to users.
 - Webhook server for handling requests and notifications.
 
@@ -37,10 +37,7 @@ python webhook.py
 This will start the webhook server to handle classification requests.
 
 ### Classify an Image
-You can send an image for classification using:
-```sh
-python get_image.py --image path/to/image.jpg
-```
+Send an image via the **LINE app**, and the bot will process it and respond with the classification result.
 
 ## 📜 Model and Dataset
 - **Model Weights:** Available at [Hugging Face](https://huggingface.co/T-music/google-vit-base-patch16-224-ISICmod-19k)
@@ -64,7 +61,7 @@ The bot integrates with a messaging API to send classification results. Ensure t
 Feel free to contribute to this project! Submit a PR or open an issue if you find bugs.
 
 ## 📄 License
-This project is licensed under the **Apache-2.0 license**.
+This project is licensed under the **Apache-2.0 License**.
 
 ---
 
