@@ -4,7 +4,7 @@ from linebot import LineBotApi
 from linebot.models import TextSendMessage, ImageSendMessage
 from linebot.exceptions import LineBotApiError
 from get_image import get_image
-# from classifier import classifier
+from classifier import classifier
 
 channel_acc_token ="RUYr3K+qxKWm10gaor6rR3kD74zofsWoNzQbhbooG6VA9wEeAzu0xSEszHCvsNf/o5qQsdfumK1svVVcFqPdpLbjFFOeIzA9xdPw2WO1BudbJQNQ8yHK1fFveDJDw9Q5eVkSZYpHAtXqhn/sMoHmtwdB04t89/1O/w1cDnyilFU="
 line_bot_api = LineBotApi(channel_acc_token)
@@ -27,8 +27,8 @@ def reply(response):
     user_id = response['events'][0]['source']['userId']
     
     image = get_image(meassageID)
-    # ans = model.classify(image)
-    ans = "Normal"
+    ans = model.classify(image)
+    # ans = "Normal"
     try:
         # send image message
         # line_bot_api.push_message(
@@ -50,5 +50,5 @@ def reply(response):
         print(e)
 
 if __name__ == '__main__':
-    # model = classifier()
+    model = classifier()
     app.run(host='0.0.0.0', port=5000)
