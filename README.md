@@ -64,7 +64,7 @@ The bot integrates with a messaging API to send classification results. Ensure t
 Feel free to contribute to this project! Submit a PR or open an issue if you find bugs.
 
 ## 📄 License
-This project is licensed under the **MIT License**.
+This project is licensed under the **Apache-2.0 license**.
 
 ---
 
